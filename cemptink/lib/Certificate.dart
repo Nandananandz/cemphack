@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:widgets_to_image/widgets_to_image.dart';
 class certificateScreen extends StatefulWidget {
-  
-  certificateScreen({super.key});
+  String name ; String eventName ;
+  certificateScreen({super.key, required this.eventName, required this.name});
 
   @override
   State<certificateScreen> createState() => _certificateScreenState();
@@ -68,99 +68,41 @@ class _certificateScreenState extends State<certificateScreen> {
                   ),
                                   SizedBox(height: 4.h),
         
-                                  Wrap(
-                                    children: [
-          Text(
-                                        'This is to certify that ',
-                                        style: TextStyle(fontSize:10.sp),
-                                      ),
-                                     SizedBox(
-                                      width: 30.w,
-                                      height: 2.h,
-                                      child: TextField(
-                                        textAlignVertical: TextAlignVertical.center,
-                                               decoration: InputDecoration(
-                                                border: InputBorder.none,
-                                        isCollapsed: true,
-                                          isDense: false,
-                                          hintText: "name",
-        
-                                        ),
-                                      ),
-                                    ),
-                                  Text(
-                                    ctctrl.name.text,
-                                    style: TextStyle(
-                                      fontSize: 12.sp,
-                                      fontWeight: FontWeight.w700,
-                                    ),textAlign: TextAlign.center,
-                                  ),
+                                  RichText(
+                                    textAlign: TextAlign.center,
+                                            text: TextSpan(
+                                          //style: DefaultTextStyle.of(context).style,
+                                          children: [
+                                            
+                                             TextSpan(
+                                              text: 'This is to certify that ',
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                            ),
+                                             TextSpan(
+                                              text: widget.name,
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black),
+                                            ),
+                                             TextSpan(
+                                              text: ' has participated in ',
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                            ),
+                                             TextSpan(
+                                              text: widget.eventName,
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black),
+                                            ),
+                                             TextSpan(
+                                              text: ' as a part of Tinkerhub hackthon 2.0 conducted at ',
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                            ),
+                                            TextSpan(
+                                              text: ' College of Engineering and management, Punnapra',
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black,fontStyle: FontStyle.italic),
+                                            ),
+                                          ],
+                                            ),
+                                          )
                                  
-                                  Text(
-                                    'has ',
-                                    style: TextStyle(fontSize: 10.sp),
-                                  ),
-                                  Text(
-                                    'has participated in ',
-                                    style: TextStyle(fontSize: 10.sp),
-                                  ),
-                                  SizedBox(
-                                      width: 20.w,
-                                      height: 2.h,
-                                      child: TextField(
-                                        textAlignVertical: TextAlignVertical.center,
-                                               decoration: InputDecoration(
-                                                border: InputBorder.none,
-                                        isCollapsed: true,
-                                          isDense: true,
-                                          
-                                          hintText: "Event"
-        
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                    ctctrl.event.text,
-                                    style: TextStyle(
-                                      fontSize: 10.sp,
-                                      fontWeight: FontWeight.w600,
-                                    ),),
-                                     Text(
-                                    'as a part of  ',
-                                    style: TextStyle(fontSize: 10.sp),
-                                  ),
-                                 
-                                  Text(
-                                    ctctrl.event.text,
-                                    style: TextStyle(
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w700,
-                                    ),),
-                                     Text(
-                                    'Tinkerhub hackthon 2.0 conducted at   ',
-                                    style: TextStyle(fontSize: 10.sp),
-                                  ),
-        
-        
-                                    RichText(
-          text: TextSpan(
-        //style: DefaultTextStyle.of(context).style,
-        children: [
-          
-          
-          TextSpan(
-            text: 'College of Engineering and management, Punnapra',
-            style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black),
-          ),
-        ],
-          ),
-        )
-                                    ],
-                                  )
-                                 
-                                 
-                                  
-                          
+                           
                        
                         
                 ],

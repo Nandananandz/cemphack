@@ -12,13 +12,7 @@ TextEditingController name = TextEditingController();
           children: [
                TextFormField(
                     controller: name,
-                    decoration: InputDecoration(labelText: 'Participant Name'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter participant name';
-                      }
-                      return null;
-                    },
+                    
                   ),
                   SizedBox(height: 20.0),
                   TextFormField(

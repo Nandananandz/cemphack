@@ -1,5 +1,7 @@
 import 'package:cemptink/Certificate.dart';
+import 'package:cemptink/dataScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -14,14 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
     builder: (context,Orientation,DeviceType){
-     return MaterialApp(
+     return GetMaterialApp(
         title: 'certificate generator app',
         theme: ThemeData(
           
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: certificateScreen(),
+        home: dataScreen(),
       );
     }
       
