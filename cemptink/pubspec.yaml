@@ -38,6 +38,8 @@ dependencies:
   sizer: ^2.0.15
   get: ^4.6.6
   widgets_to_image: ^0.0.2
+  image_gallery_saver: ^2.0.3
+  file_saver: ^0.2.11
 dev_dependencies:
   flutter_test:
     sdk: flutter
