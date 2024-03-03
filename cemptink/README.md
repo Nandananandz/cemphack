@@ -29,20 +29,20 @@ Make sure you have Flutter installed on your development machine. For installati
 
 ### Usage
 
-1. Open the project in your preferred Flutter development environment (e.g., VSCode, Android Studio).
+1. Open the project in your preferred Flutter development environment**: Open the project in your IDE or text editor of choice (e.g., VSCode, Android Studio).
 
-2. Modify the certificate template according to your requirements. The template file is located at `assets/certificate_template.png`.
+2. Customize the certificate template located at `assets/certificate_template.png` to meet your specific design requirements.
 
-3. Run the application:
+3. Launch the application using `flutter run` command in the terminal.
 
+4. Enter the required details for the certificate, such as recipient name, event name, and date, using the app's interface.
 
-4. Enter the required details in the app, such as recipient name, event name, and date.
+5. View a real-time preview of the certificate with the entered details.
 
-5. Preview the certificate in real-time with the entered details.
-
-6. Generate the certificate in your preferred format (PDF, JPEG, PNG) by clicking the "Generate" button.
+6. Click the "Generate" button to generate the certificate in your preferred format (PDF, JPEG, or PNG).
 
 7. Save the generated certificate to your device or share it via other apps as needed.
+
 
 ## Screenshots
 
