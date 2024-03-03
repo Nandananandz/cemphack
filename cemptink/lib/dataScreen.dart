@@ -11,7 +11,7 @@ class dataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+ backgroundColor: Color.fromARGB(255, 217, 106, 158).withOpacity(0.8),
       body: Column(
         children: [
         SizedBox(height: 10.h),
@@ -36,7 +36,9 @@ class dataScreen extends StatelessWidget {
                                      Container(
                                       margin: EdgeInsets.only(left: 3.w),
                                        child: TextField(
+
                                        controller:  eventname,  
+                                       
                                          maxLines: 1,
                                          textAlignVertical: TextAlignVertical.center,
                                                 decoration: InputDecoration(
@@ -44,11 +46,13 @@ class dataScreen extends StatelessWidget {
                                          isCollapsed: true,
                                            isDense: false,
                                            hintText: "Event Name",
-                                               
+                                            
                                          ),
+                                        
                                        ),
                                      ),
-                                     SizedBox(height: 4.h,),
+                                     SizedBox(height: 10.h,),
+                    
                                      InkWell(
                                       onTap: (){
                                      
@@ -57,7 +61,7 @@ class dataScreen extends StatelessWidget {
                                        child: Container(
                                         width: 70.w,
                                         height: 6.h,
-                                        color: Colors.blue,
+                                        decoration: BoxDecoration(color: const Color.fromARGB(255, 39, 41, 42),borderRadius: BorderRadius.circular(5.w)),
                                         alignment: Alignment.center,
                                         child: Text("Submit",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
                                        ),

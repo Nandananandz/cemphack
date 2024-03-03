@@ -24,18 +24,25 @@ class _certificateScreenState extends State<certificateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 217, 106, 158).withOpacity(0.8),
     body: 
     Column(
+     // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(height: 4.h,),
+       SizedBox(height: 15.h,),
+       RichText(
+        textAlign: TextAlign.center,text: 
+         TextSpan(text:   "  Your Certificate is Ready to Download!",style: TextStyle(color: Colors.white,fontSize: 20.sp,fontWeight: FontWeight.w600),)),
+       
+        SizedBox( height: 5.h,),
         WidgetsToImage(
           controller: controller,
           child: Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
             child: Container(
               width: 90.w,
               height: 80.w,
-              color:Colors.pinkAccent.withOpacity(0.2),
+             decoration: BoxDecoration( color:Colors.white,borderRadius: BorderRadius.circular(5.w)),
               padding: EdgeInsets.all(3.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,15 +55,22 @@ class _certificateScreenState extends State<certificateScreen> {
                         height:5.w,
                         child:Image.asset("assets/logo.png")),
                     ),
-                      SizedBox(height: 4.h,),
+                      SizedBox(height: 1.h,),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("TINKERHUB",style: TextStyle(fontSize: 11.sp,fontWeight: FontWeight.w600,color: Colors.black),))
+                      child: Text("TINKERHUB",style: TextStyle(fontSize: 12.sp,fontWeight: FontWeight.w800,color: Colors.black),))
                   
                 
                   
                   
-                  ,Align(
+                  ,
+                   Row(
+                     children: [
+                       SizedBox(
+                                                width: 19.w,
+                                                height: 19.w,
+                                                child: Image.asset("assets/pic.png")),SizedBox(width: 2.w,)
+                                                ,Align(
                     alignment: Alignment.center,
                     child: Text(
                                       'Certificate of Participation',
@@ -66,6 +80,12 @@ class _certificateScreenState extends State<certificateScreen> {
                                       ),
                                     ),
                   ),
+                     ],
+                   ),
+                                 
+                           
+                  //SizedBox(height: 2.h,),
+                  
                                   SizedBox(height: 4.h),
         
                                   RichText(
@@ -76,23 +96,23 @@ class _certificateScreenState extends State<certificateScreen> {
                                             
                                              TextSpan(
                                               text: 'This is to certify that ',
-                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black,fontStyle: FontStyle.italic),
                                             ),
                                              TextSpan(
                                               text: widget.name,
-                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black),
+                                              style:TextStyle(fontSize:12.sp,fontWeight: FontWeight.w600,color: Colors.black,fontStyle: FontStyle.italic),
                                             ),
                                              TextSpan(
                                               text: ' has participated in ',
-                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black,fontStyle: FontStyle.italic),
                                             ),
                                              TextSpan(
                                               text: widget.eventName,
-                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w600,color: Colors.black),
+                                              style:TextStyle(fontSize:12.sp,fontWeight: FontWeight.w600,color: Colors.black),
                                             ),
                                              TextSpan(
                                               text: ' as a part of Tinkerhub hackthon 2.0 conducted at ',
-                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black),
+                                              style:TextStyle(fontSize:10.sp,fontWeight: FontWeight.w400,color: Colors.black,fontStyle: FontStyle.italic),
                                             ),
                                             TextSpan(
                                               text: ' College of Engineering and management, Punnapra',
@@ -100,9 +120,9 @@ class _certificateScreenState extends State<certificateScreen> {
                                             ),
                                           ],
                                             ),
-                                          )
-                                 
-                           
+                                          ),
+
+                                         
                        
                         
                 ],
@@ -113,7 +133,7 @@ class _certificateScreenState extends State<certificateScreen> {
       ],
     ),
     floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.image_outlined),
+          child: const Icon(Icons.download_for_offline_rounded,),
           onPressed: () async {
             final bytes = await controller.capture();
          FileSaver.instance.saveAs(bytes: bytes, name: 'certificate', mimeType: MimeType.png, ext: '123', );
