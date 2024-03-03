@@ -56,3 +56,5 @@ Contributions are welcome! If you have any suggestions, feature requests, or bug
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[![Watch the video](https://www.loom.com/share/8f6d7156510a4d8a8e229b73eebed53a?sid=7a219da6-178b-47c9-b0c7-73f7de52032a)]
+
